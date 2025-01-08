@@ -42,11 +42,8 @@ function App() {
       return;
     }
 
-    // Pivot Point (PP) hisoblash
     const ppValue = (parseFloat(high) + parseFloat(low) + parseFloat(close)) / 3;
-    setPp(ppValue.toFixed(3)); // 3 o'nlik raqamni saqlash
-
-    // Resistance va Support darajalarini hisoblash
+    setPp(ppValue.toFixed(3)); 
     const r1Value = (2 * ppValue) - parseFloat(low);
     const s1Value = (2 * ppValue) - parseFloat(high);
     const r2Value = ppValue + (parseFloat(high) - parseFloat(low));
@@ -54,12 +51,12 @@ function App() {
     const r3Value = parseFloat(high) + 2 * (ppValue - parseFloat(low));
     const s3Value = parseFloat(low) - 2 * (parseFloat(high) - ppValue);
 
-    setR1(r1Value.toFixed(3)); // 3 o'nlik raqamni saqlash
-    setS1(s1Value.toFixed(3)); // 3 o'nlik raqamni saqlash
-    setR2(r2Value.toFixed(3)); // 3 o'nlik raqamni saqlash
-    setS2(s2Value.toFixed(3)); // 3 o'nlik raqamni saqlash
-    setR3(r3Value.toFixed(3)); // 3 o'nlik raqamni saqlash
-    setS3(s3Value.toFixed(3)); // 3 o'nlik raqamni saqlash
+    setR1(r1Value.toFixed(3)); 
+    setS1(s1Value.toFixed(3)); 
+    setR2(r2Value.toFixed(3)); 
+    setS2(s2Value.toFixed(3)); 
+    setR3(r3Value.toFixed(3)); 
+    setS3(s3Value.toFixed(3)); 
 
     remove();
   };
