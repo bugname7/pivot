@@ -44,7 +44,7 @@ function App() {
 
     // Pivot Point (PP) hisoblash
     const ppValue = (parseFloat(high) + parseFloat(low) + parseFloat(close)) / 3;
-    setPp(ppValue.toFixed(5)); // 5 onlik raqamni saqlash
+    setPp(ppValue.toFixed(3)); // 3 o'nlik raqamni saqlash
 
     // Resistance va Support darajalarini hisoblash
     const r1Value = (2 * ppValue) - parseFloat(low);
@@ -54,12 +54,12 @@ function App() {
     const r3Value = parseFloat(high) + 2 * (ppValue - parseFloat(low));
     const s3Value = parseFloat(low) - 2 * (parseFloat(high) - ppValue);
 
-    setR1(r1Value.toFixed(5)); // 5 onlik raqamni saqlash
-    setS1(s1Value.toFixed(5)); // 5 onlik raqamni saqlash
-    setR2(r2Value.toFixed(5)); // 5 onlik raqamni saqlash
-    setS2(s2Value.toFixed(5)); // 5 onlik raqamni saqlash
-    setR3(r3Value.toFixed(5)); // 5 onlik raqamni saqlash
-    setS3(s3Value.toFixed(5)); // 5 onlik raqamni saqlash
+    setR1(r1Value.toFixed(3)); // 3 o'nlik raqamni saqlash
+    setS1(s1Value.toFixed(3)); // 3 o'nlik raqamni saqlash
+    setR2(r2Value.toFixed(3)); // 3 o'nlik raqamni saqlash
+    setS2(s2Value.toFixed(3)); // 3 o'nlik raqamni saqlash
+    setR3(r3Value.toFixed(3)); // 3 o'nlik raqamni saqlash
+    setS3(s3Value.toFixed(3)); // 3 o'nlik raqamni saqlash
 
     remove();
   };
