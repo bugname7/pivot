@@ -43,7 +43,7 @@ function App() {
     }
 
     const ppValue = (parseFloat(high) + parseFloat(low) + parseFloat(close)) / 3;
-    setPp(ppValue.toFixed(3));
+    setPp(ppValue.toFixed(4));
     const r1Value = (2 * ppValue) - parseFloat(low);
     const s1Value = (2 * ppValue) - parseFloat(high);
     const r2Value = ppValue + (parseFloat(high) - parseFloat(low));
@@ -62,12 +62,12 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex justify-center items-center p-4">
+    <div className="min-h-screen bg-blue-500 flex justify-center items-center p-4 ">
       <form
         onSubmit={handleSubmit}
         className="bg-blue-200 p-5 rounded-md shadow-2xl flex flex-col w-full max-w-[500px] mx-auto"
       >
-        <h1 className="text-2xl font-medium mb-5 text-center">Kunlik Pivot Darajalari</h1>
+        <h1 className="text-2xl font-medium mb-5 text-center">Kunlik Pivot Darajalari:</h1>
 
         <label htmlFor="high" className="text-xl mb-1">High kiriting</label>
         <input
@@ -107,7 +107,7 @@ function App() {
         </button>
       </form>
 
-      <div className="w-full max-w-[500px] mx-auto bg-green-500 p-5 rounded-xl mt-10">
+      <div className="w-full max-w-[500px] mx-auto bg-green-500 p-5 rounded-xl mt-10 shadow-xl">
         <h1 className="text-md font-medium text-center text-2xl text-white">Asosiy Pivot narxi: {pp}</h1>
 
         <div className="flex flex-wrap justify-between gap-4 mt-4">
